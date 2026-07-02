@@ -38,6 +38,7 @@ jobs:
         working-directory: backend
         env:
           MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
+          TEST_MONGODB_URI: ${{ secrets.TEST_MONGODB_URI }}
           SECRET: ${{ secrets.SECRET }}
 
       - name: Build frontend
