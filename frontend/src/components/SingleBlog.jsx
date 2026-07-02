@@ -1,8 +1,8 @@
-import { useDispatch, useSelector } from "react-redux"
-import { useParams, useNavigate } from "react-router-dom"
-import { useState } from "react"
-import { likeBlog, deleteBlog, addComment } from "../reducers/blogReducer"
-import useNotify from "../hooks/useNotify"
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { likeBlog, deleteBlog, addComment } from '../reducers/blogReducer'
+import useNotify from '../hooks/useNotify'
 
 const SingleBlog = () => {
   const { id } = useParams()
@@ -45,30 +45,30 @@ const SingleBlog = () => {
       <div>
         <a href={blog.url}>{blog.url}</a>
       </div>
-    <div>
-    <div>
-      {blog.likes} likes <button className='btn primary' onClick={handleVote}>like</button>
-    </div>
-    <div>
+      <div>
+        <div>
+          {blog.likes} likes <button className='btn primary' onClick={handleVote}>like</button>
+        </div>
+        <div>
       added by {blog.user.name}
-    </div>
-    {canRemove && (
-      <button className='danger'  onClick={handleDelete}>remove</button>
-    )}
-    <h3>Comments</h3>
-    <form onSubmit={handleCommentSubmit}>
-      <input
-        value={comment}
-        onChange={({ target }) => setComment(target.value)}
-      />
-      <button type="submit">add comment</button>
-    </form>
-    <ul>
-      {(blog.comments || []).map((c, i) => (
-        <li key={i}>{c}</li>
-      ))}
-    </ul>
-    </div>
+        </div>
+        {canRemove && (
+          <button className='danger'  onClick={handleDelete}>remove</button>
+        )}
+        <h3>Comments</h3>
+        <form onSubmit={handleCommentSubmit}>
+          <input
+            value={comment}
+            onChange={({ target }) => setComment(target.value)}
+          />
+          <button type="submit">add comment</button>
+        </form>
+        <ul>
+          {(blog.comments || []).map((c, i) => (
+            <li key={i}>{c}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

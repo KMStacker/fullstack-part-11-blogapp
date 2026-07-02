@@ -30,7 +30,7 @@ const Users = () => {
               </td>
               <td>{user.blogs.length}</td>
             </tr>
-            ))}
+          ))}
         </tbody>
       </table>
     </div>

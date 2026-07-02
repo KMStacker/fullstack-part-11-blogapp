@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux"
-import { useRef } from "react"
-import Blog from "./Blog"
-import Togglable from "./Togglable"
-import NewBlog from "./NewBlog"
+import { useSelector } from 'react-redux'
+import { useRef } from 'react'
+import Blog from './Blog'
+import Togglable from './Togglable'
+import NewBlog from './NewBlog'
 
 const BlogList = ({ handleCreate, handleVote, handleDelete }) => {
   const blogs = useSelector(state => state.blogs)

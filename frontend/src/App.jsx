@@ -57,7 +57,7 @@ const App = () => {
       </div>
     )
   }
-  
+
   const navBarStyle = {
     display: 'flex',
     gap: 5,

@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
-import loginService from "../services/login";
-import storage from "../services/storage";
+import { createSlice } from '@reduxjs/toolkit'
+import loginService from '../services/login'
+import storage from '../services/storage'
 
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState: null,
   reducers: {
     setUser(state, action) {
@@ -13,7 +13,7 @@ const userSlice = createSlice({
       return null
     }
   }
-});
+})
 
 export const { setUser, clearUser } = userSlice.actions
 
